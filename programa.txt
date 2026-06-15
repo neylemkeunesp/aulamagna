@@ -1,0 +1,216 @@
+PROGRAMA DE AULA MAGNA
+CONCURSO PARA PROFESSOR TITULAR
+Departamento de Biofísica e Farmacologia
+Instituto de Biociências - UNESP Botucatu
+
+TÍTULO DA AULA MAGNA
+"A relevância da Mecânica Clássica na era da Inteligência Artificial Generativa"
+
+I. JUSTIFICATIVA E CONTEXTO
+A presente Aula Magna visa estabelecer uma reflexão filosófica sobre dois dos mais
+poderosos instrumentos de compreensão do mundo desenvolvidos pela humanidade: a
+Mecânica Clássica e a Inteligência Artificial Generativa. Ambos representam, em suas
+respectivas épocas, paradigmas de como formalizamos o conhecimento sobre a natureza e
+criamos modelos preditivos da realidade.
+
+A Mecânica Clássica, desde Newton, Lagrange e Hamilton, estabeleceu não apenas um
+conjunto de leis físicas, mas uma forma de pensar sobre o mundo: determinística, causal,
+matematicamente rigorosa e fundamentada em princípios de mínima ação. A IA Generativa,
+emergente no século XXI, propõe uma epistemologia complementar: probabilística, baseada
+em correlações estatísticas massivas, e capaz de emergir padrões sem conhecimento
+explícito das leis fundamentais.
+
+II. ESTRUTURA DO PROGRAMA
+
+1. INTRODUÇÃO FILOSÓFICA: Instrumentos para Compreender o Mundo (10
+min)
+1.1. A Questão Epistemológica Fundamental
+• O que significa "compreender" a natureza?
+• Modelos analíticos versus modelos estatísticos
+
+1.2. Duas Tradições de Conhecimento
+• A tradição analítica: das leis fundamentais à previsão (top-down)
+• A tradição empírica: dos dados aos padrões (bottom-up)
+• Como a Mecânica Clássica e a IA representam essas tradições
+
+2. FUNDAMENTOS DA MECÂNICA CLÁSSICA COMO INSTRUMENTO CONCEITUAL
+(10 min)
+2.1. A Revolução Newtoniana e a Matematização da Natureza
+• As três leis de Newton como paradigma de simplicidade e poder explicativo
+• Conceitos de força, massa e aceleração: abstração matemática da realidade física
+• O determinismo laplaciano e suas implicações filosóficas
+2.2. O Formalismo Lagrangiano e Hamiltoniano: Elegância e Generalidade
+• Princípio de mínima ação: a natureza "escolhe" caminhos ótimos
+• Coordenadas generalizadas: liberdade de descrição
+2.3. Do Determinismo ao Caos Determinístico
+• Problema dos dois corpos
+• Problema dos três corpos
+• Sensibilidade às condições iniciais
+• Os limites da previsibilidade mesmo em sistemas determinísticos
+• Teorema KAM
+
+3. INTELIGÊNCIA ARTIFICIAL GENERATIVA: Nova Forma de Conhecimento (10
+min)
+3.1. Paradigma da IA: Aprendizado a partir de Padrões
+• De regras explícitas a redes neurais: uma mudança epistemológica
+• O poder da representação distribuída
+• Emergência de comportamento sem programação explícita
+
+3.2. Modelos Generativos e a Compreensão Probabilística do Mundo
+• Arquiteturas transformer e atenção: mecanismos de contextualização
+• Espaços latentes: geometria oculta dos dados
+• Geração versus compreensão: o dilema da "caixa preta"
+
+4. PONTES CONCEITUAIS: Mecânica Clássica e IA Generativa (10 min)
+4.1. Princípios Variacionais em Ambos os Paradigmas
+• Princípio de mínima ação na mecânica
+• Minimização de energia livre no cérebro e na IA (Princípio da Energia Livre de Friston)
+• Otimização como princípio unificador: gradiente descendente e cálculo de variações
+4.2. Aplicações Práticas: IA para Física e Física para IA
+• IA para resolver equações diferenciais
+• IA para descobrir leis físicas
+• Conceitos físicos inspirando arquiteturas de IA
+• Simulações físicas versus simulações neurais
+
+5. IMPLICAÇÕES FILOSÓFICAS E METODOLÓGICAS (10 min)
+5.1. Complementaridade Epistemológica
+• Conhecimento dedutivo versus conhecimento indutivo
+• Explicação versus predição: diferentes objetivos científicos
+• O valor da compreensão mecanística versus correlacional
+5.2. Perspectivas Futuras
+• Hibridização de modelos: o melhor dos dois mundos
+• IA explicável inspirada em princípios físicos
+• Novos paradigmas de descoberta científica
+
+6. CONCLUSÃO: Instrumentos Complementares para um Mundo Complexo (10
+min)
+6.1. A Permanente Relevância da Mecânica Clássica
+• Fundamento conceitual de toda física
+• Paradigma de raciocínio científico rigoroso
+• Linguagem essencial para a física moderna
+6.2. A Mecânica Clássica na Era Digital
+• Inspiração para algoritmos e arquiteturas
+• Benchmark para validação de modelos de IA
+• Fonte de princípios organizadores universais
+
+6.3. Síntese Filosófica
+• Diferentes formas de conhecimento não são excludentes
+• A ciência avança pela pluralidade metodológica
+• O físico contemporâneo como integrador de paradigmas
+
+III. METODOLOGIA E RECURSOS
+Duração total: 105 minutos (1h45min)
+
+Recursos audiovisuais: Apresentação com equações, diagramas conceituais, visualizações
+de sistemas físicos e arquiteturas de IA
+Exemplos concretos: Gravitação, modelo de linguagem, rede neural convolucional
+
+Demonstrações: Simulações numéricas comparando abordagens analíticas e de IA
+
+IV. OBJETIVOS DE APRENDIZAGEM
+
+Ao final da Aula Magna, os participantes deverão ser capazes de:
+
+1. Compreender a Mecânica Clássica e a IA Generativa como instrumentos epistemológicos
+complementares
+2. Identificar estruturas matemáticas e conceituais compartilhadas entre ambos os
+paradigmas
+3. Refletir criticamente sobre diferentes formas de conhecimento científico
+
+4. Reconhecer a relevância permanente da Mecânica Clássica na formação e prática
+científica contemporânea
+
+5. Vislumbrar possibilidades de integração entre métodos tradicionais e contemporâneos
+
+V. BIBLIOGRAFIA
+A) Livros - Base do Concurso
+Obras Fundamentais de Mecânica Clássica:
+
+ARNOLD, V. I. Mathematical methods of classical mechanics. 2nd ed. New York:
+Springer-Verlag, 1989. 516 p.
+
+BARCELOS NETO, J. Mecânica: Newtoniana, Lagrangiana e Hamiltoniana. São Paulo:
+Livraria da Física, 2004. 431 p.
+GOLDSTEIN, H. Classical mechanics. 2nd ed. New York: Addison Wesley, 2002. 638
+p.
+
+LANDAU, L. D.; LIFSHITZ, E. M. Mechanics. 3rd ed. Oxford: Butterworth-Heinemann,
+1976. 197 p.
+
+MARION, J. B.; THORNTON, S. T. Dinâmica clássica de partículas e sistemas. São
+Paulo: Cengage, 2011. 608 p.
+SUDARSHAN, E. C. G.; MUKUNDA, N. Classical dynamics: a modern perspective. 2nd
+ed. Singapore: World Scientific, 2015.
+SYMON, K. R. Mecânica. 2. ed. Rio de Janeiro: Campus, 1986. 685 p.
+
+Perspectiva Histórica e Filosófica:
+
+DUGAS, R. A history of mechanics. Mineola: Dover Publications, 2011. 688 p.
+
+FEYNMAN, R. P.; LEIGHTON, R. B.; SANDS, M. The Feynman lectures on physics. v. 1:
+Mainly mechanics, radiation, and heat. New York: Basic Books, 2015. 560 p.
+
+JAMMER, M. Concepts of force: a study in the foundations of dynamics. Mineola:
+Courier Corporation, 1999. 269 p.
+RICHARD, S. Une histoire philosophique de la physique. Paris: VRIN, 2021. 572 p.
+
+WESTFALL, R. S. Never at rest: a biography of Isaac Newton. Cambridge: Cambridge
+University Press, 1983. 928 p.
+
+B) Artigos de Periódicos - Base do Concurso
+FRISTON, K.; DA COSTA, L.; SAJID, N.; HEINS, C.; UELTZHÖFFER, K.; PAVLIOTIS, G. A.;
+PARR, T. The free energy principle made simpler but not too simple. Physics
+Reports, Amsterdam, v. 1024, p. 1-29, 2023.
+
+C) Periódicos de Referência
+REVISTA BRASILEIRA DE ENSINO DE FÍSICA. São Paulo: Sociedade Brasileira de
+Física, 1992- . ISSN 1806-1117.
+
+THE PHYSICS TEACHER. College Park: American Association of Physics Teachers,
+1963- . ISSN 0031-921X.
+
+D) Bibliografia Complementar: Conexões entre Física e IA
+Livros sobre IA e Aprendizado de Máquina:
+
+GOODFELLOW, I.; BENGIO, Y.; COURVILLE, A. Deep Learning. Cambridge: MIT Press,
+2016. 800 p.
+
+RUSSELL, S.; NORVIG, P. Artificial Intelligence: A Modern Approach. 4th ed.
+Hoboken: Pearson, 2020. 1136 p.
+
+Obras sobre Filosofia da Ciência e Epistemologia:
+
+POPPER, K. The Logic of Scientific Discovery. London: Routledge, 2002. 544 p.
+
+KUHN, T. S. The Structure of Scientific Revolutions. 4th ed. Chicago: University of
+Chicago Press, 2012. 264 p.
+
+Artigos Recentes Conectando Física e IA:
+
+CARLEO, G.; CIRAC, I.; CRANMER, K.; DAUDET, L.; SCHULD, M.; TISHBY, N.; VOGTMARANTO, L.; ZDEBOROVÁ, L. Machine learning and the physical sciences. Reviews
+of Modern Physics, v. 91, n. 4, p. 045002, 2019.
+
+CRANMER, M. D.; GREYDANUS, S.; HOYER, S.; BATTAGLIA, P.; SPERGEL, D.; HO, S.
+Lagrangian Neural Networks. ICLR 2020 Workshop on Integration of Deep Neural
+Models and Differential Equations, 2020.
+KARNIADAKIS, G. E.; KEVREKIDIS, I. G.; LU, L.; PERDIKARIS, P.; WANG, S.; YANG, L.
+Physics-informed machine learning. Nature Reviews Physics, v. 3, p. 422-440, 2021.
+
+BRUNTON, S. L.; PROCTOR, J. L.; KUTZ, J. N. Discovering governing equations from
+data by sparse identification of nonlinear dynamical systems. Proceedings of the
+National Academy of Sciences, v. 113, n. 15, p. 3932-3937, 2016.
+
+VI. NOTAS METODOLÓGICAS
+Esta Aula Magna foi concebida para:
+
+• Respeitar a tradição acadêmica da Mecânica Clássica enquanto disciplina fundamental
+• Dialogar com o presente incorporando desenvolvimentos contemporâneos em IA
+• Estimular o pensamento crítico sobre metodologias científicas
+
+• Inspirar novas gerações de físicos a dominarem múltiplos paradigmas
+• Demonstrar a vitalidade de conceitos clássicos na ciência moderna
+
+A abordagem filosófica escolhida permite transcender aspectos meramente técnicos e
+alcançar questões epistemológicas profundas sobre a natureza do conhecimento científico.
+
+

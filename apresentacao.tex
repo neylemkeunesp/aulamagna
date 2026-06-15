@@ -1,0 +1,1256 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+
+% ============================================
+% CONFIGURAÇÕES DO TEMA
+% ============================================
+\usetheme{Madrid}
+\usecolortheme{whale}
+
+% Cores personalizadas (azul institucional)
+\definecolor{unespazul}{RGB}{0,61,121}
+\definecolor{unespvermelho}{RGB}{178,34,34}
+\setbeamercolor{structure}{fg=unespazul}
+\setbeamercolor{title}{fg=white,bg=unespazul}
+\setbeamercolor{frametitle}{fg=white,bg=unespazul}
+\setbeamercolor{block title}{fg=white,bg=unespazul}
+\setbeamercolor{block body}{bg=unespazul!10}
+
+% ============================================
+% PACOTES
+% ============================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning,calc,decorations.pathreplacing}
+\usepackage{booktabs}
+\usepackage{multimedia}
+\usepackage{hyperref}
+
+% ============================================
+% CONFIGURAÇÕES ADICIONAIS
+% ============================================
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{caption}[numbered]
+
+% Numerar seções no TOC
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[subsections numbered]
+
+% ============================================
+% INFORMAÇÕES DA APRESENTAÇÃO
+% ============================================
+\title[Mecânica Clássica e IA]{A Relevância da Mecânica Clássica na Era da Inteligência Artificial Generativa}
+\subtitle{Aula Magna -- Concurso para Professor Titular}
+\author{Candidato}
+\institute[UNESP]{
+    Departamento de Biofísica e Farmacologia\\
+    Instituto de Biociências\\
+    UNESP Botucatu
+}
+\date{\today}
+
+% Logo (descomentar se tiver o arquivo)
+% \titlegraphic{\includegraphics[height=1.5cm]{unesp-logo.png}}
+
+\begin{document}
+
+% ============================================
+% SLIDE TÍTULO
+% ============================================
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% ============================================
+% EPÍGRAFE
+% ============================================
+\begin{frame}
+    \centering
+    \vfill
+    \begin{quote}
+        \Large\itshape
+        ``Se vi mais longe, foi por estar sobre ombros de gigantes.''
+    \end{quote}
+    \vspace{0.5cm}
+    \hfill --- Isaac Newton, 1675
+    \vfill
+\end{frame}
+
+% ============================================
+% SUMÁRIO
+% ============================================
+\begin{frame}{Roteiro}
+    \tableofcontents
+\end{frame}
+
+% ============================================
+% SEÇÃO 1: INTRODUÇÃO FILOSÓFICA
+% ============================================
+\section{Introdução Filosófica}
+
+\begin{frame}{A Questão Epistemológica Fundamental}
+    \begin{center}
+        \Large\textbf{O que significa ``compreender'' a natureza?}
+    \end{center}
+    \vspace{1cm}
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Compreensão Analítica}
+                \begin{itemize}
+                    \item Leis fundamentais
+                    \item Relações causais
+                    \item Dedução matemática
+                    \item \textbf{Por que} acontece
+                \end{itemize}
+            \end{block}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Compreensão Estatística}
+                \begin{itemize}
+                    \item Padrões nos dados
+                    \item Correlações
+                    \item Inferência probabilística
+                    \item \textbf{O que} acontece
+                \end{itemize}
+            \end{block}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Modelos Analíticos vs. Modelos Estatísticos}
+    \begin{center}
+    \begin{tikzpicture}[scale=0.9, transform shape,
+        box/.style={rectangle, draw=unespazul, fill=unespazul!20, thick,
+                    minimum width=3cm, minimum height=1.2cm, align=center}]
+
+        % Lado esquerdo - Analítico
+        \node[box] (leis) at (-4,2) {Leis\\Fundamentais};
+        \node[box] (modelo) at (-4,0) {Modelo\\Matemático};
+        \node[box] (pred1) at (-4,-2) {Previsões};
+
+        \draw[->, thick, unespazul] (leis) -- (modelo);
+        \draw[->, thick, unespazul] (modelo) -- (pred1);
+
+        \node[above=0.3cm of leis, font=\bfseries] {Abordagem Analítica};
+
+        % Lado direito - Estatístico
+        \node[box] (dados) at (4,2) {Dados\\Massivos};
+        \node[box] (padroes) at (4,0) {Padrões\\Aprendidos};
+        \node[box] (pred2) at (4,-2) {Previsões};
+
+        \draw[->, thick, unespazul] (dados) -- (padroes);
+        \draw[->, thick, unespazul] (padroes) -- (pred2);
+
+        \node[above=0.3cm of dados, font=\bfseries] {Abordagem Estatística};
+
+        % Setas de comparação
+        \draw[<->, dashed, thick, unespvermelho] (-1.5,0) -- (1.5,0)
+            node[midway, above, font=\small] {Complementares?};
+    \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Duas Tradições de Conhecimento}
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Tradição Analítica (Top-Down)}
+                \begin{itemize}
+                    \item Princípios primeiros
+                    \item Dedução rigorosa
+                    \item Leis universais
+                    \item Determinismo
+                \end{itemize}
+                \vspace{0.3cm}
+                \centering
+                \textbf{Mecânica Clássica}
+            \end{block}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Tradição Empírica (Bottom-Up)}
+                \begin{itemize}
+                    \item Dados observados
+                    \item Indução estatística
+                    \item Padrões locais
+                    \item Probabilismo
+                \end{itemize}
+                \vspace{0.3cm}
+                \centering
+                \textbf{IA Generativa}
+            \end{block}
+        \end{column}
+    \end{columns}
+    \vspace{0.5cm}
+    \begin{center}
+        \textit{Ambas buscam modelos preditivos da realidade}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Paralelo Histórico}
+    \begin{center}
+    \begin{tikzpicture}[scale=0.85, transform shape]
+        % Timeline
+        \draw[thick, ->, unespazul] (0,0) -- (12,0) node[right] {tempo};
+
+        % Marcadores
+        \draw[thick, unespazul] (1,0.2) -- (1,-0.2) node[below] {1687};
+        \draw[thick, unespazul] (4,0.2) -- (4,-0.2) node[below] {1788};
+        \draw[thick, unespazul] (6,0.2) -- (6,-0.2) node[below] {1833};
+        \draw[thick, unespazul] (9,0.2) -- (9,-0.2) node[below] {2017};
+        \draw[thick, unespazul] (11,0.2) -- (11,-0.2) node[below] {2022};
+
+        % Eventos
+        \node[above=0.5cm, align=center, font=\small] at (1,0) {Newton\\Principia};
+        \node[above=0.5cm, align=center, font=\small] at (4,0) {Lagrange\\Méc. Anal.};
+        \node[above=0.5cm, align=center, font=\small] at (6,0) {Hamilton\\Formalismo};
+        \node[above=0.5cm, align=center, font=\small] at (9,0) {Transformer\\Vaswani};
+        \node[above=0.5cm, align=center, font=\small] at (11,0) {ChatGPT\\OpenAI};
+
+        % Arcos
+        \draw[thick, unespvermelho, decorate, decoration={brace, amplitude=10pt}]
+            (0.5,1.8) -- (6.5,1.8) node[midway, above=12pt] {Mecânica Clássica};
+        \draw[thick, unespvermelho, decorate, decoration={brace, amplitude=10pt}]
+            (8.5,1.8) -- (11.5,1.8) node[midway, above=12pt] {IA Generativa};
+    \end{tikzpicture}
+    \end{center}
+    \vspace{0.5cm}
+    \begin{center}
+        \textit{Dois paradigmas de formalização do conhecimento sobre a natureza}
+    \end{center}
+\end{frame}
+
+% ============================================
+% SEÇÃO 2: FUNDAMENTOS DA MECÂNICA CLÁSSICA
+% ============================================
+\section{Fundamentos da Mecânica Clássica}
+
+\begin{frame}{A Revolução Newtoniana}
+    \begin{columns}[T]
+        \begin{column}{0.55\textwidth}
+            \textbf{As Três Leis de Newton}
+            \vspace{0.3cm}
+
+            \textbf{1ª Lei} (Inércia):
+            \begin{equation*}
+                \vec{F} = 0 \Rightarrow \vec{v} = \text{constante}
+            \end{equation*}
+
+            \textbf{2ª Lei} (Dinâmica):
+            \begin{equation*}
+                \vec{F} = m\vec{a} = m\frac{d^2\vec{r}}{dt^2}
+            \end{equation*}
+
+            \textbf{3ª Lei} (Ação e Reação):
+            \begin{equation*}
+                \vec{F}_{12} = -\vec{F}_{21}
+            \end{equation*}
+        \end{column}
+        \begin{column}{0.42\textwidth}
+            \begin{block}{Paradigma de Simplicidade}
+                \begin{itemize}
+                    \item Três leis
+                    \item Poder explicativo universal
+                    \item Matematização da natureza
+                \end{itemize}
+            \end{block}
+            \vspace{0.3cm}
+            \begin{alertblock}{Gravitação Universal}
+                \begin{equation*}
+                    F = G\frac{m_1 m_2}{r^2}
+                \end{equation*}
+            \end{alertblock}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{O Determinismo Laplaciano}
+    \begin{quote}
+        \itshape
+        ``Uma inteligência que, em um dado instante, conhecesse todas as forças que animam a natureza e a situação de cada ser que a compõe [...] nada seria incerto para ela, e o futuro, como o passado, estaria presente aos seus olhos.''
+    \end{quote}
+    \hfill --- Pierre-Simon Laplace, 1814
+
+    \vspace{0.5cm}
+
+    \begin{block}{Implicações Filosóficas}
+        \begin{itemize}
+            \item Conhecendo $\vec{r}(t_0)$ e $\vec{v}(t_0)$ $\Rightarrow$ conhecemos $\vec{r}(t)$ para todo $t$
+            \item O universo como um relógio mecânico
+            \item Previsibilidade total em princípio
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Formalismo Lagrangiano}
+    \begin{block}{Princípio de Mínima Ação (Hamilton)}
+        \begin{equation*}
+            \delta S = \delta \int_{t_1}^{t_2} L(q, \dot{q}, t) \, dt = 0
+        \end{equation*}
+    \end{block}
+
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \textbf{Lagrangiana:}
+            \begin{equation*}
+                L = T - V
+            \end{equation*}
+
+            \textbf{Equações de Euler-Lagrange:}
+            \begin{equation*}
+                \frac{d}{dt}\frac{\partial L}{\partial \dot{q}_i} - \frac{\partial L}{\partial q_i} = 0
+            \end{equation*}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Vantagens}
+                \begin{itemize}
+                    \item Coordenadas generalizadas
+                    \item Invariância por transformações
+                    \item Elegância matemática
+                    \item Conexão com simetrias
+                \end{itemize}
+            \end{block}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Formalismo Hamiltoniano}
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \textbf{Hamiltoniana:}
+            \begin{equation*}
+                H(q, p, t) = \sum_i p_i \dot{q}_i - L
+            \end{equation*}
+
+            \textbf{Equações Canônicas:}
+            \begin{align*}
+                \dot{q}_i &= \frac{\partial H}{\partial p_i} \\[0.3cm]
+                \dot{p}_i &= -\frac{\partial H}{\partial q_i}
+            \end{align*}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Espaço de Fase}
+                \begin{itemize}
+                    \item Espaço $(q, p)$ de $2n$ dimensões
+                    \item Trajetórias determinísticas
+                    \item Fluxo hamiltoniano
+                    \item Base para Mecânica Quântica
+                \end{itemize}
+            \end{block}
+
+            \begin{alertblock}{Conservação}
+                \begin{equation*}
+                    \frac{dH}{dt} = \frac{\partial H}{\partial t}
+                \end{equation*}
+            \end{alertblock}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Problema dos Dois Corpos}
+    \begin{columns}[T]
+        \begin{column}{0.55\textwidth}
+            \begin{block}{Solução Analítica Exata}
+                Redução ao problema de um corpo:
+                \begin{equation*}
+                    \mu = \frac{m_1 m_2}{m_1 + m_2}
+                \end{equation*}
+
+                Órbitas cônicas:
+                \begin{equation*}
+                    r(\theta) = \frac{p}{1 + e\cos\theta}
+                \end{equation*}
+            \end{block}
+
+            \textbf{Leis de Kepler} derivadas matematicamente
+        \end{column}
+        \begin{column}{0.42\textwidth}
+            \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+                % Órbita elíptica
+                \draw[thick, unespazul] (0,0) ellipse (2.5cm and 1.5cm);
+                % Sol
+                \fill[yellow!80!orange] (-1,0) circle (0.2cm);
+                \node[below] at (-1,-0.3) {$m_1$};
+                % Planeta
+                \fill[unespazul] (2.5,0) circle (0.15cm);
+                \node[right] at (2.7,0) {$m_2$};
+                % Vetor r
+                \draw[->, thick, unespvermelho] (-1,0) -- (2.5,0) node[midway, above] {$\vec{r}$};
+            \end{tikzpicture}
+            \end{center}
+
+            \vspace{0.3cm}
+            \textit{Triunfo da mecânica newtoniana}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Problema dos Três Corpos}
+    \begin{columns}[T]
+        \begin{column}{0.55\textwidth}
+            \begin{alertblock}{Sem Solução Analítica Geral}
+                \begin{itemize}
+                    \item Poincaré (1890): demonstrou a inexistência de solução geral
+                    \item Sensibilidade às condições iniciais
+                    \item Nascimento da teoria do caos
+                \end{itemize}
+            \end{alertblock}
+
+            \vspace{0.3cm}
+
+            \textbf{Caos Determinístico:}
+            \begin{itemize}
+                \item Equações determinísticas
+                \item Comportamento imprevisível
+                \item Expoentes de Lyapunov
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.42\textwidth}
+            \begin{center}
+            \begin{tikzpicture}[scale=0.6]
+                % Três corpos
+                \fill[yellow!80!orange] (0,0) circle (0.3cm);
+                \fill[unespazul] (2,1.5) circle (0.2cm);
+                \fill[unespvermelho] (-1,2) circle (0.15cm);
+
+                % Vetores
+                \draw[->, thick, gray] (0,0) -- (2,1.5);
+                \draw[->, thick, gray] (0,0) -- (-1,2);
+                \draw[->, thick, gray] (2,1.5) -- (-1,2);
+
+                % Trajetórias caóticas
+                \draw[thick, unespazul, dashed] (2,1.5)
+                    to[out=120, in=0] (0.5,2.5)
+                    to[out=180, in=90] (-1.5,1);
+                \draw[thick, unespvermelho, dashed] (-1,2)
+                    to[out=-30, in=150] (1,1)
+                    to[out=-30, in=180] (2.5,0);
+            \end{tikzpicture}
+            \end{center}
+
+            \vspace{0.3cm}
+            \textit{Limites da previsibilidade}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Do Determinismo ao Caos}
+    \begin{block}{Sensibilidade às Condições Iniciais}
+        Pequenas diferenças iniciais $\Rightarrow$ grandes divergências
+        \begin{equation*}
+            |\delta \vec{r}(t)| \sim |\delta \vec{r}(0)| e^{\lambda t}
+        \end{equation*}
+        onde $\lambda > 0$ é o expoente de Lyapunov
+    \end{block}
+
+    \vspace{0.3cm}
+
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Teorema KAM}
+                Kolmogorov-Arnold-Moser (1954-1963)
+                \begin{itemize}
+                    \item Estabilidade parcial
+                    \item Toros invariantes
+                    \item Ilhas de regularidade
+                \end{itemize}
+            \end{block}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{alertblock}{Implicação}
+                \textit{Mesmo sistemas determinísticos têm horizonte de previsibilidade finito}
+            \end{alertblock}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% ============================================
+% SEÇÃO 3: INTELIGÊNCIA ARTIFICIAL GENERATIVA
+% ============================================
+\section{Inteligência Artificial Generativa}
+
+\begin{frame}{Uma Nova Forma de Conhecimento}
+    \begin{center}
+        \Large\textbf{Paradigma da IA: Aprendizado a partir de Padrões}
+    \end{center}
+
+    \vspace{0.5cm}
+
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \begin{block}{IA Simbólica (Clássica)}
+                \begin{itemize}
+                    \item Regras explícitas
+                    \item Conhecimento codificado
+                    \item Raciocínio dedutivo
+                    \item ``GOFAI''
+                \end{itemize}
+            \end{block}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{block}{IA Conexionista (Moderna)}
+                \begin{itemize}
+                    \item Padrões aprendidos
+                    \item Conhecimento distribuído
+                    \item Inferência estatística
+                    \item Redes neurais profundas
+                \end{itemize}
+            \end{block}
+        \end{column}
+    \end{columns}
+
+    \vspace{0.5cm}
+    \begin{center}
+        \textit{Mudança epistemológica fundamental}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Redes Neurais: Representação Distribuída}
+    \begin{columns}[T]
+        \begin{column}{0.55\textwidth}
+            \textbf{Neurônio Artificial:}
+            \begin{equation*}
+                y = \sigma\left(\sum_i w_i x_i + b\right)
+            \end{equation*}
+
+            \textbf{Aprendizado:}
+            \begin{equation*}
+                w \leftarrow w - \eta \frac{\partial \mathcal{L}}{\partial w}
+            \end{equation*}
+
+            \begin{block}{Características}
+                \begin{itemize}
+                    \item Milhões/bilhões de parâmetros
+                    \item Representações emergentes
+                    \item Aproximadores universais
+                \end{itemize}
+            \end{block}
+        \end{column}
+        \begin{column}{0.42\textwidth}
+            \begin{center}
+            \begin{tikzpicture}[scale=0.6,
+                neuron/.style={circle, draw=unespazul, fill=unespazul!30, minimum size=0.6cm}]
+                % Input layer
+                \foreach \i in {1,2,3} {
+                    \node[neuron] (I\i) at (0, 2-\i) {};
+                }
+                % Hidden layer
+                \foreach \i in {1,2,3,4} {
+                    \node[neuron] (H\i) at (2, 2.5-\i) {};
+                }
+                % Output layer
+                \foreach \i in {1,2} {
+                    \node[neuron] (O\i) at (4, 1.5-\i) {};
+                }
+                % Connections
+                \foreach \i in {1,2,3} {
+                    \foreach \j in {1,2,3,4} {
+                        \draw[->, gray] (I\i) -- (H\j);
+                    }
+                }
+                \foreach \i in {1,2,3,4} {
+                    \foreach \j in {1,2} {
+                        \draw[->, gray] (H\i) -- (O\j);
+                    }
+                }
+                % Labels
+                \node[left] at (-0.5, 0.5) {\small Input};
+                \node[above] at (2, 2) {\small Hidden};
+                \node[right] at (4.5, 0.5) {\small Output};
+            \end{tikzpicture}
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Arquitetura Transformer}
+    \begin{columns}[T]
+        \begin{column}{0.55\textwidth}
+            \textbf{Mecanismo de Atenção:}
+            \begin{equation*}
+                \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+            \end{equation*}
+
+            \begin{block}{Inovações}
+                \begin{itemize}
+                    \item Self-attention: contexto global
+                    \item Paralelização eficiente
+                    \item Escalabilidade
+                    \item Transferência de aprendizado
+                \end{itemize}
+            \end{block}
+        \end{column}
+        \begin{column}{0.42\textwidth}
+            \begin{alertblock}{LLMs}
+                Large Language Models
+                \begin{itemize}
+                    \item GPT, Claude, Gemini
+                    \item $10^{11}$ parâmetros
+                    \item Treinados em terabytes
+                    \item Capacidades emergentes
+                \end{itemize}
+            \end{alertblock}
+        \end{column}
+    \end{columns}
+
+    \vspace{0.3cm}
+    \begin{center}
+        \textit{Vaswani et al., ``Attention Is All You Need'', 2017}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Espaços Latentes: Geometria Oculta}
+    \begin{columns}[T]
+        \begin{column}{0.55\textwidth}
+            \begin{block}{Representações Aprendidas}
+                \begin{itemize}
+                    \item Dados $\rightarrow$ espaço de alta dimensão
+                    \item Estrutura geométrica significativa
+                    \item Operações algébricas com sentido
+                \end{itemize}
+            \end{block}
+
+            \vspace{0.3cm}
+
+            \textbf{Exemplo (Word2Vec):}
+            \begin{equation*}
+                \vec{rei} - \vec{homem} + \vec{mulher} \approx \vec{rainha}
+            \end{equation*}
+        \end{column}
+        \begin{column}{0.42\textwidth}
+            \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+                % Axes
+                \draw[->, thick, gray] (-0.5,0) -- (3.5,0);
+                \draw[->, thick, gray] (0,-0.5) -- (0,3);
+
+                % Points
+                \fill[unespazul] (1,0.5) circle (0.1cm) node[below right] {\tiny homem};
+                \fill[unespazul] (2.5,0.8) circle (0.1cm) node[below right] {\tiny rei};
+                \fill[unespvermelho] (0.8,2) circle (0.1cm) node[above left] {\tiny mulher};
+                \fill[unespvermelho] (2.3,2.3) circle (0.1cm) node[above right] {\tiny rainha};
+
+                % Vectors
+                \draw[->, thick, unespazul] (1,0.5) -- (2.5,0.8);
+                \draw[->, thick, unespvermelho] (0.8,2) -- (2.3,2.3);
+                \draw[->, dashed, gray] (1,0.5) -- (0.8,2);
+                \draw[->, dashed, gray] (2.5,0.8) -- (2.3,2.3);
+            \end{tikzpicture}
+            \end{center}
+
+            \vspace{0.3cm}
+            \textit{Geometria com semântica}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Geração vs. Compreensão}
+    \begin{center}
+        \Large\textbf{O Dilema da ``Caixa Preta''}
+    \end{center}
+
+    \vspace{0.5cm}
+
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \begin{block}{O que a IA faz bem}
+                \begin{itemize}
+                    \item Reconhecer padrões
+                    \item Gerar conteúdo coerente
+                    \item Interpolar entre exemplos
+                    \item Generalizar estatisticamente
+                \end{itemize}
+            \end{block}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{alertblock}{Limitações}
+                \begin{itemize}
+                    \item Não ``compreende'' causalmente
+                    \item Alucinações
+                    \item Raciocínio lógico limitado
+                    \item Interpretabilidade restrita
+                \end{itemize}
+            \end{alertblock}
+        \end{column}
+    \end{columns}
+
+    \vspace{0.5cm}
+    \begin{center}
+        \textit{``Stochastic parrots'' vs. compreensão genuína?}
+    \end{center}
+\end{frame}
+
+% ============================================
+% SEÇÃO 4: PONTES CONCEITUAIS
+% ============================================
+\section{Pontes Conceituais}
+
+\begin{frame}{Princípios Variacionais: Conexão Profunda}
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Mecânica Clássica}
+                \textbf{Princípio de Mínima Ação:}
+                \begin{equation*}
+                    \delta S = \delta \int L \, dt = 0
+                \end{equation*}
+
+                A natureza ``escolhe'' o caminho que extremiza a ação
+            \end{block}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Redes Neurais}
+                \textbf{Minimização da Loss:}
+                \begin{equation*}
+                    \min_\theta \mathcal{L}(\theta) = \min_\theta \sum_i \ell(f_\theta(x_i), y_i)
+                \end{equation*}
+
+                O modelo ``escolhe'' parâmetros que minimizam o erro
+            \end{block}
+        \end{column}
+    \end{columns}
+
+    \vspace{0.5cm}
+
+    \begin{alertblock}{Princípio Unificador}
+        \centering
+        \textbf{Otimização} como linguagem comum
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}{Gradiente Descendente e Cálculo de Variações}
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \textbf{Cálculo de Variações:}
+            \begin{equation*}
+                \frac{\delta F}{\delta y} = \frac{\partial f}{\partial y} - \frac{d}{dx}\frac{\partial f}{\partial y'}
+            \end{equation*}
+
+            Encontra funções que extremizam funcionais
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \textbf{Gradiente Descendente:}
+            \begin{equation*}
+                \theta_{t+1} = \theta_t - \eta \nabla_\theta \mathcal{L}
+            \end{equation*}
+
+            Encontra parâmetros que minimizam funções
+        \end{column}
+    \end{columns}
+
+    \vspace{0.5cm}
+
+    \begin{center}
+    \begin{tikzpicture}[scale=0.8]
+        % Surface
+        \draw[thick, unespazul, domain=-2:2, samples=50]
+            plot (\x, {0.5*\x*\x});
+
+        % Gradient descent steps
+        \fill[unespvermelho] (-1.8, 1.62) circle (0.08cm);
+        \fill[unespvermelho] (-1.2, 0.72) circle (0.08cm);
+        \fill[unespvermelho] (-0.6, 0.18) circle (0.08cm);
+        \fill[unespvermelho] (0, 0) circle (0.08cm);
+
+        \draw[->, thick, unespvermelho] (-1.8, 1.62) -- (-1.25, 0.77);
+        \draw[->, thick, unespvermelho] (-1.2, 0.72) -- (-0.65, 0.23);
+        \draw[->, thick, unespvermelho] (-0.6, 0.18) -- (-0.05, 0.05);
+
+        \node[below] at (0, -0.3) {mínimo};
+        \node[right] at (2.2, 2) {$\mathcal{L}(\theta)$};
+    \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Princípio da Energia Livre (Friston)}
+    \begin{block}{Framework Unificador}
+        Sistemas adaptativos minimizam \textbf{energia livre variacional}:
+        \begin{equation*}
+            F = D_{KL}[q(\theta) \| p(\theta | x)] - \log p(x)
+        \end{equation*}
+    \end{block}
+
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \textbf{Aplicações:}
+            \begin{itemize}
+                \item Neurociência computacional
+                \item Percepção ativa
+                \item Controle motor
+                \item Aprendizado de máquina
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \textbf{Conexões:}
+            \begin{itemize}
+                \item Inferência Bayesiana
+                \item Termodinâmica
+                \item Mecânica estatística
+                \item Princípio de mínima ação
+            \end{itemize}
+        \end{column}
+    \end{columns}
+
+    \vspace{0.3cm}
+    \begin{center}
+        \textit{Friston et al., Physics Reports, 2023}
+    \end{center}
+\end{frame}
+
+\begin{frame}{IA para Resolver Equações Diferenciais}
+    \begin{block}{Physics-Informed Neural Networks (PINNs)}
+        \begin{equation*}
+            \mathcal{L} = \mathcal{L}_{\text{dados}} + \lambda \mathcal{L}_{\text{física}}
+        \end{equation*}
+
+        Rede neural treinada para satisfazer EDPs
+    \end{block}
+
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \textbf{Vantagens:}
+            \begin{itemize}
+                \item Sem malha (mesh-free)
+                \item Alta dimensionalidade
+                \item Dados escassos
+                \item Problemas inversos
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \textbf{Aplicações:}
+            \begin{itemize}
+                \item Dinâmica de fluidos
+                \item Mecânica quântica
+                \item Propagação de ondas
+                \item Relatividade geral
+            \end{itemize}
+        \end{column}
+    \end{columns}
+
+    \vspace{0.3cm}
+    \begin{center}
+        \textit{Karniadakis et al., Nature Reviews Physics, 2021}
+    \end{center}
+\end{frame}
+
+\begin{frame}{IA para Descobrir Leis Físicas}
+    \begin{block}{SINDy: Sparse Identification of Nonlinear Dynamics}
+        \begin{equation*}
+            \dot{\mathbf{x}} = \boldsymbol{\Theta}(\mathbf{x}) \, \boldsymbol{\xi}
+        \end{equation*}
+        onde $\boldsymbol{\Theta}$ é uma biblioteca de funções candidatas e $\boldsymbol{\xi}$ são coeficientes esparsos
+    \end{block}
+
+    \begin{columns}[T]
+        \begin{column}{0.55\textwidth}
+            \textbf{Exemplos de Sucesso:}
+            \begin{itemize}
+                \item Redescoberta de leis de Kepler
+                \item Identificação de Hamiltonianos
+                \item Leis de conservação
+                \item Simetrias ocultas
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.42\textwidth}
+            \begin{alertblock}{Questão Filosófica}
+                \textit{A IA ``compreende'' as leis que descobre?}
+            \end{alertblock}
+        \end{column}
+    \end{columns}
+
+    \vspace{0.3cm}
+    \begin{center}
+        \textit{Brunton et al., PNAS, 2016}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Física Inspirando Arquiteturas de IA}
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Lagrangian Neural Networks}
+                \begin{equation*}
+                    \frac{d}{dt}\frac{\partial \mathcal{L}_\theta}{\partial \dot{q}} = \frac{\partial \mathcal{L}_\theta}{\partial q}
+                \end{equation*}
+
+                Redes que respeitam estrutura lagrangiana
+            \end{block}
+
+            \begin{block}{Hamiltonian Neural Networks}
+                \begin{align*}
+                    \dot{q} &= \frac{\partial H_\theta}{\partial p} \\
+                    \dot{p} &= -\frac{\partial H_\theta}{\partial q}
+                \end{align*}
+            \end{block}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \textbf{Vantagens:}
+            \begin{itemize}
+                \item Conservação de energia garantida
+                \item Estabilidade de longo prazo
+                \item Extrapolação confiável
+                \item Interpretabilidade física
+            \end{itemize}
+
+            \vspace{0.5cm}
+
+            \textit{O melhor dos dois mundos: aprendizado com estrutura física}
+        \end{column}
+    \end{columns}
+
+    \vspace{0.3cm}
+    \begin{center}
+        \textit{Cranmer et al., ICLR Workshop, 2020}
+    \end{center}
+\end{frame}
+
+% ============================================
+% SEÇÃO 5: IMPLICAÇÕES FILOSÓFICAS
+% ============================================
+\section{Implicações Filosóficas}
+
+\begin{frame}{Complementaridade Epistemológica}
+    \begin{center}
+    \begin{tabular}{lcc}
+        \toprule
+        & \textbf{Mecânica Clássica} & \textbf{IA Generativa} \\
+        \midrule
+        Abordagem & Top-down & Bottom-up \\
+        Raciocínio & Dedutivo & Indutivo \\
+        Conhecimento & Leis fundamentais & Padrões nos dados \\
+        Objetivo & Explicação causal & Predição estatística \\
+        Transparência & Alta & Baixa \\
+        Generalização & Por princípios & Por interpolação \\
+        \bottomrule
+    \end{tabular}
+    \end{center}
+
+    \vspace{0.5cm}
+
+    \begin{alertblock}{Tese Central}
+        \centering
+        \textbf{Não são excludentes, mas complementares}
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}{Explicação vs. Predição}
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Explicação Causal}
+                \begin{itemize}
+                    \item Por que o fenômeno ocorre?
+                    \item Mecanismos subjacentes
+                    \item Compreensão profunda
+                    \item Transferível entre contextos
+                \end{itemize}
+
+                \vspace{0.3cm}
+                \centering
+                \textit{``A maçã cai porque a gravidade atrai''}
+            \end{block}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Predição Estatística}
+                \begin{itemize}
+                    \item O que vai acontecer?
+                    \item Correlações observadas
+                    \item Precisão prática
+                    \item Contexto-dependente
+                \end{itemize}
+
+                \vspace{0.3cm}
+                \centering
+                \textit{``Historicamente, maçãs caem''}
+            \end{block}
+        \end{column}
+    \end{columns}
+
+    \vspace{0.5cm}
+
+    \begin{center}
+        \textbf{Ambas são formas válidas de conhecimento científico}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Hibridização: O Melhor dos Dois Mundos}
+    \begin{center}
+    \begin{tikzpicture}[scale=0.9, transform shape,
+        box/.style={rectangle, draw=unespazul, fill=unespazul!20, thick,
+                    minimum width=2.5cm, minimum height=1cm, align=center, rounded corners}]
+
+        % Physics
+        \node[box] (physics) at (-3,0) {Física\\(Estrutura)};
+
+        % AI
+        \node[box] (ai) at (3,0) {IA\\(Flexibilidade)};
+
+        % Hybrid
+        \node[box, fill=unespvermelho!20, draw=unespvermelho] (hybrid) at (0,-2) {Modelos\\Híbridos};
+
+        % Arrows
+        \draw[->, thick, unespazul] (physics) -- (hybrid);
+        \draw[->, thick, unespazul] (ai) -- (hybrid);
+
+        % Benefits
+        \node[right=2cm of hybrid, align=left, font=\small] {
+            $\bullet$ Conservação de energia\\
+            $\bullet$ Interpretabilidade\\
+            $\bullet$ Flexibilidade\\
+            $\bullet$ Aprendizado eficiente
+        };
+    \end{tikzpicture}
+    \end{center}
+
+    \vspace{0.3cm}
+
+    \begin{block}{Exemplos}
+        \begin{itemize}
+            \item Neural ODEs com estrutura hamiltoniana
+            \item PINNs para problemas inversos
+            \item Graph Neural Networks para simulações físicas
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{IA Explicável Inspirada em Princípios Físicos}
+    \begin{block}{Desafio da Interpretabilidade}
+        Como tornar modelos de IA mais compreensíveis?
+    \end{block}
+
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \textbf{Princípios da Física:}
+            \begin{itemize}
+                \item Leis de conservação
+                \item Simetrias
+                \item Localidade
+                \item Causalidade
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \textbf{Aplicações em IA:}
+            \begin{itemize}
+                \item Equivariant NNs
+                \item Conservation laws constraints
+                \item Causal representation learning
+                \item Physics-guided architectures
+            \end{itemize}
+        \end{column}
+    \end{columns}
+
+    \vspace{0.5cm}
+
+    \begin{center}
+        \textit{A física como fonte de princípios reguladores para IA}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Novos Paradigmas de Descoberta Científica}
+    \begin{center}
+        \Large\textbf{O Futuro da Física na Era da IA}
+    \end{center}
+
+    \vspace{0.5cm}
+
+    \begin{enumerate}
+        \item \textbf{Descoberta assistida por IA}
+        \begin{itemize}
+            \item Identificação de padrões em dados massivos
+            \item Sugestão de hipóteses a serem testadas
+        \end{itemize}
+
+        \item \textbf{Simulação acelerada}
+        \begin{itemize}
+            \item Emuladores neurais de simulações físicas
+            \item Exploração de espaços de parâmetros
+        \end{itemize}
+
+        \item \textbf{Síntese de conhecimento}
+        \begin{itemize}
+            \item Integração de dados heterogêneos
+            \item Conexões entre áreas distintas
+        \end{itemize}
+    \end{enumerate}
+
+    \vspace{0.3cm}
+
+    \begin{alertblock}{}
+        \centering
+        \textit{O físico como integrador de paradigmas}
+    \end{alertblock}
+\end{frame}
+
+% ============================================
+% SEÇÃO 6: CONCLUSÃO
+% ============================================
+\section{Conclusão}
+
+\begin{frame}{A Permanente Relevância da Mecânica Clássica}
+    \begin{columns}[T]
+        \begin{column}{0.55\textwidth}
+            \begin{block}{Fundamento Conceitual}
+                \begin{itemize}
+                    \item Base de toda física moderna
+                    \item Linguagem matemática universal
+                    \item Paradigma de rigor científico
+                    \item Framework para novos desenvolvimentos
+                \end{itemize}
+            \end{block}
+
+            \begin{block}{Relevância Contemporânea}
+                \begin{itemize}
+                    \item Engenharia e tecnologia
+                    \item Astrofísica e cosmologia
+                    \item Biofísica e sistemas complexos
+                    \item Inspiração para algoritmos
+                \end{itemize}
+            \end{block}
+        \end{column}
+        \begin{column}{0.42\textwidth}
+            \begin{alertblock}{Mensagem Central}
+                \textit{A Mecânica Clássica não é obsoleta --- é fundamental e atemporal}
+            \end{alertblock}
+
+            \vspace{0.5cm}
+
+            \begin{quote}
+                \small\itshape
+                ``A mecânica de Newton é ainda a física que mais se usa.''
+            \end{quote}
+            \hfill --- Feynman
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Mecânica Clássica na Era Digital}
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Inspiração para IA}
+                \begin{itemize}
+                    \item Arquiteturas baseadas em física
+                    \item Princípios variacionais
+                    \item Leis de conservação
+                    \item Simetrias como inductive bias
+                \end{itemize}
+            \end{block}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Benchmark para IA}
+                \begin{itemize}
+                    \item Validação de modelos
+                    \item Ground truth analítico
+                    \item Teste de extrapolação
+                    \item Avaliação de interpretabilidade
+                \end{itemize}
+            \end{block}
+        \end{column}
+    \end{columns}
+
+    \vspace{0.5cm}
+
+    \begin{center}
+        \textbf{A Mecânica Clássica como pedra de toque para a era da IA}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Síntese Filosófica}
+    \begin{center}
+    \begin{tikzpicture}[scale=0.85, transform shape]
+        % Venn diagram
+        \draw[thick, fill=unespazul!30] (-1.5,0) circle (2.5cm);
+        \draw[thick, fill=unespvermelho!30] (1.5,0) circle (2.5cm);
+
+        % Labels
+        \node at (-3,2.5) {\textbf{Mecânica Clássica}};
+        \node at (3,2.5) {\textbf{IA Generativa}};
+
+        % Left circle content
+        \node[align=center] at (-2.8,0) {\small Determinismo\\\small Causalidade\\\small Leis universais};
+
+        % Right circle content
+        \node[align=center] at (2.8,0) {\small Probabilismo\\\small Correlação\\\small Padrões locais};
+
+        % Intersection
+        \node[align=center] at (0,0) {\small Otimização\\\small Modelagem\\\small Predição};
+
+        % Bottom message
+        \node at (0,-3.5) {\large\textbf{Complementaridade Epistemológica}};
+    \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Mensagem Final}
+    \begin{center}
+        \Large
+        \textbf{Diferentes formas de conhecimento não são excludentes}
+
+        \vspace{1cm}
+
+        \textbf{A ciência avança pela pluralidade metodológica}
+
+        \vspace{1cm}
+
+        \textbf{O físico contemporâneo: integrador de paradigmas}
+    \end{center}
+
+    \vspace{1cm}
+
+    \begin{alertblock}{}
+        \centering
+        A Mecânica Clássica permanece relevante não \textit{apesar} da IA, mas \textit{junto} com ela --- como instrumento complementar na busca pela compreensão da natureza.
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}
+    \centering
+    \vfill
+
+    {\Huge\textbf{Obrigado}}
+
+    \vspace{1cm}
+
+    {\Large Perguntas?}
+
+    \vfill
+
+    \begin{quote}
+        \itshape
+        ``O objetivo da física é descobrir as leis que a natureza escolheu, não as leis que nós gostaríamos que ela tivesse escolhido.''
+    \end{quote}
+    \hfill --- Richard Feynman
+
+    \vfill
+\end{frame}
+
+% ============================================
+% REFERÊNCIAS
+% ============================================
+\begin{frame}[allowframebreaks]{Referências Selecionadas}
+    \footnotesize
+
+    \textbf{Mecânica Clássica}
+    \begin{itemize}
+        \item GOLDSTEIN, H. \textit{Classical Mechanics}. 2nd ed. Addison Wesley, 2002.
+        \item LANDAU, L. D.; LIFSHITZ, E. M. \textit{Mechanics}. 3rd ed. Butterworth-Heinemann, 1976.
+        \item ARNOLD, V. I. \textit{Mathematical Methods of Classical Mechanics}. Springer, 1989.
+    \end{itemize}
+
+    \framebreak
+
+    \textbf{IA e Aprendizado de Máquina}
+    \begin{itemize}
+        \item GOODFELLOW, I.; BENGIO, Y.; COURVILLE, A. \textit{Deep Learning}. MIT Press, 2016.
+        \item VASWANI, A. et al. Attention Is All You Need. \textit{NeurIPS}, 2017.
+    \end{itemize}
+
+    \textbf{Conexões Física-IA}
+    \begin{itemize}
+        \item KARNIADAKIS, G. E. et al. Physics-informed machine learning. \textit{Nature Reviews Physics}, v. 3, p. 422-440, 2021.
+        \item BRUNTON, S. L. et al. Discovering governing equations from data. \textit{PNAS}, v. 113, n. 15, p. 3932-3937, 2016.
+        \item FRISTON, K. et al. The free energy principle made simpler. \textit{Physics Reports}, v. 1024, p. 1-29, 2023.
+        \item CRANMER, M. D. et al. Lagrangian Neural Networks. \textit{ICLR Workshop}, 2020.
+    \end{itemize}
+\end{frame}
+
+\end{document}
