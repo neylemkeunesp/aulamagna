@@ -441,19 +441,21 @@
     \begin{alertblock}{Resultado Fundamental}
         \textbf{Sistemas determinísticos e conservativos podem ser caóticos}
     \end{alertblock}
-
-    \begin{block}{Sensibilidade às Condições Iniciais}
-        Pequenas diferenças iniciais $\Rightarrow$ grandes divergências
-        \begin{equation*}
-            |\delta \vec{r}(t)| \sim |\delta \vec{r}(0)| e^{\lambda t}
-        \end{equation*}
-        onde $\lambda > 0$ é o expoente de Lyapunov
-    \end{block}
-
+    \vspace{-0.2cm}
     \begin{columns}[T]
-        \begin{column}{0.48\textwidth}
+        \begin{column}{0.55\textwidth}
+            \begin{block}{Sensibilidade às Condições Iniciais}
+                Pequenas diferenças $\Rightarrow$ grandes divergências
+                \begin{equation*}
+                    |\delta \vec{r}(t)| \sim |\delta \vec{r}(0)| e^{\lambda t}
+                \end{equation*}
+                onde $\lambda > 0$ é o expoente de Lyapunov
+            \end{block}
+        \end{column}
+        \begin{column}{0.42\textwidth}
             \begin{block}{Teorema KAM}
-                Kolmogorov-Arnold-Moser (1954-1963)
+                \small
+                Kolmogorov-Arnold-Moser
                 \begin{itemize}
                     \item Estabilidade parcial
                     \item Toros invariantes
@@ -461,12 +463,12 @@
                 \end{itemize}
             \end{block}
         \end{column}
-        \begin{column}{0.48\textwidth}
-            \begin{block}{Implicação}
-                Mesmo com energia conservada e equações determinísticas, o sistema tem \textbf{horizonte de previsibilidade finito}
-            \end{block}
-        \end{column}
     \end{columns}
+    \vspace{-0.1cm}
+    \begin{block}{}
+        \centering
+        Mesmo com energia conservada, há \textbf{horizonte de previsibilidade finito}
+    \end{block}
 \end{frame}
 
 % ============================================
@@ -514,18 +516,20 @@
     \begin{columns}[T]
         \begin{column}{0.55\textwidth}
             \textbf{Neurônio Artificial:}
+            \vspace{-0.2cm}
             \begin{equation*}
                 y = \sigma\left(\sum_i w_i x_i + b\right)
             \end{equation*}
-
-            \textbf{Aprendizado:}
+            \vspace{-0.3cm}
+            \textbf{Aprendizado (gradiente descendente):}
+            \vspace{-0.2cm}
             \begin{equation*}
-                w \leftarrow w - \eta \frac{\partial \mathcal{L}}{\partial w}
+                w \leftarrow w - \eta \nabla_w \mathcal{L}
             \end{equation*}
-
+            \vspace{-0.4cm}
             \begin{block}{Características}
                 \begin{itemize}
-                    \item Milhões/bilhões de parâmetros
+                    \item Bilhões de parâmetros
                     \item Representações emergentes
                     \item Aproximadores universais
                 \end{itemize}
@@ -570,26 +574,21 @@
 
 \begin{frame}{Geometrização do Conhecimento}
     \begin{center}
-        \Large\textbf{A Grande Ideia: Conhecimento como Geometria}
+        \large\textbf{A Grande Ideia: Conhecimento como Geometria}
     \end{center}
-
-    \vspace{0.5cm}
-
+    \vspace{0.2cm}
     \begin{block}{Insight Fundamental}
-        Conceitos, palavras e ideias podem ser representados como \textbf{pontos em espaços de alta dimensão}, onde:
+        Conceitos e palavras como \textbf{pontos em espaços de alta dimensão}:
         \begin{itemize}
             \item \textbf{Proximidade} $\approx$ similaridade semântica
             \item \textbf{Direções} $\approx$ relações conceituais
             \item \textbf{Operações vetoriais} $\approx$ raciocínio analógico
         \end{itemize}
     \end{block}
-
-    \vspace{0.3cm}
-
     \begin{columns}[T]
         \begin{column}{0.48\textwidth}
             \begin{alertblock}{Paralelo com a Física}
-                Assim como a física geometrizou o espaço-tempo (Relatividade), a IA geometriza o \textit{espaço semântico}
+                Assim como a Relatividade geometrizou o espaço-tempo, a IA geometriza o \textit{espaço semântico}
             \end{alertblock}
         \end{column}
         \begin{column}{0.48\textwidth}
@@ -907,18 +906,20 @@
     \begin{columns}[T]
         \begin{column}{0.48\textwidth}
             \begin{block}{Lagrangian Neural Networks}
+                \vspace{-0.2cm}
                 \begin{equation*}
                     \frac{d}{dt}\frac{\partial \mathcal{L}_\theta}{\partial \dot{q}} = \frac{\partial \mathcal{L}_\theta}{\partial q}
                 \end{equation*}
-
-                Redes que respeitam estrutura lagrangiana
+                \vspace{-0.4cm}
+                \small Redes que respeitam estrutura lagrangiana
             \end{block}
-
+            \vspace{-0.15cm}
             \begin{block}{Hamiltonian Neural Networks}
-                \begin{align*}
-                    \dot{q} &= \frac{\partial H_\theta}{\partial p} \\
-                    \dot{p} &= -\frac{\partial H_\theta}{\partial q}
-                \end{align*}
+                \vspace{-0.2cm}
+                \begin{equation*}
+                    \dot{q} = \frac{\partial H_\theta}{\partial p}, \;\;
+                    \dot{p} = -\frac{\partial H_\theta}{\partial q}
+                \end{equation*}
             \end{block}
         \end{column}
         \begin{column}{0.48\textwidth}
@@ -930,15 +931,14 @@
                 \item Interpretabilidade física
             \end{itemize}
 
-            \vspace{0.5cm}
+            \vspace{0.2cm}
 
             \textit{O melhor dos dois mundos: aprendizado com estrutura física}
         \end{column}
     \end{columns}
-
-    \vspace{0.3cm}
+    \vspace{0.1cm}
     \begin{center}
-        \textit{Cranmer et al., ICLR Workshop, 2020}
+        \small\textit{Cranmer et al., ICLR Workshop, 2020}
     \end{center}
 \end{frame}
 
@@ -1222,16 +1222,16 @@
         \Large
         \textbf{Diferentes formas de conhecimento não são excludentes}
 
-        \vspace{1cm}
+        \vspace{0.6cm}
 
         \textbf{A ciência avança pela pluralidade metodológica}
 
-        \vspace{1cm}
+        \vspace{0.6cm}
 
         \textbf{O físico contemporâneo: integrador de paradigmas}
     \end{center}
 
-    \vspace{1cm}
+    \vspace{0.5cm}
 
     \begin{alertblock}{}
         \centering
