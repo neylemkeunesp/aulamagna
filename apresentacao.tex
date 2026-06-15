@@ -906,16 +906,11 @@
     \begin{columns}[T]
         \begin{column}{0.48\textwidth}
             \begin{block}{Lagrangian Neural Networks}
-                \vspace{-0.2cm}
                 \begin{equation*}
                     \frac{d}{dt}\frac{\partial \mathcal{L}_\theta}{\partial \dot{q}} = \frac{\partial \mathcal{L}_\theta}{\partial q}
                 \end{equation*}
-                \vspace{-0.4cm}
-                \small Redes que respeitam estrutura lagrangiana
             \end{block}
-            \vspace{-0.15cm}
             \begin{block}{Hamiltonian Neural Networks}
-                \vspace{-0.2cm}
                 \begin{equation*}
                     \dot{q} = \frac{\partial H_\theta}{\partial p}, \;\;
                     \dot{p} = -\frac{\partial H_\theta}{\partial q}
@@ -940,6 +935,36 @@
     \begin{center}
         \small\textit{Cranmer et al., ICLR Workshop, 2020}
     \end{center}
+\end{frame}
+
+\begin{frame}{Neural ODEs: Dinâmica Contínua Aprendida}
+    \begin{columns}[T]
+        \begin{column}{0.52\textwidth}
+            \begin{block}{Ideia Central}
+                Camadas ocultas como \textbf{evolução temporal contínua}:
+                \begin{equation*}
+                    \frac{d\mathbf{h}}{dt} = f_\theta(\mathbf{h}(t), t)
+                \end{equation*}
+                Estado final obtido por integração numérica
+            \end{block}
+
+            \begin{alertblock}{Conexão com Física}
+                A rede neural define um \textbf{campo vetorial} no espaço de estados --- análogo a um sistema dinâmico
+            \end{alertblock}
+        \end{column}
+        \begin{column}{0.45\textwidth}
+            \textbf{Vantagens:}
+            \begin{itemize}
+                \item Profundidade adaptativa
+                \item Memória eficiente
+                \item Séries temporais irregulares
+                \item Fluxos normalizantes contínuos
+            \end{itemize}
+
+            \vspace{0.3cm}
+            \small\textit{Chen et al., NeurIPS, 2018}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 % ============================================
