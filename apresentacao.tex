@@ -568,6 +568,86 @@
     \end{columns}
 \end{frame}
 
+\begin{frame}{Geometrização do Conhecimento}
+    \begin{center}
+        \Large\textbf{A Grande Ideia: Conhecimento como Geometria}
+    \end{center}
+
+    \vspace{0.5cm}
+
+    \begin{block}{Insight Fundamental}
+        Conceitos, palavras e ideias podem ser representados como \textbf{pontos em espaços de alta dimensão}, onde:
+        \begin{itemize}
+            \item \textbf{Proximidade} $\approx$ similaridade semântica
+            \item \textbf{Direções} $\approx$ relações conceituais
+            \item \textbf{Operações vetoriais} $\approx$ raciocínio analógico
+        \end{itemize}
+    \end{block}
+
+    \vspace{0.3cm}
+
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \begin{alertblock}{Paralelo com a Física}
+                Assim como a física geometrizou o espaço-tempo (Relatividade), a IA geometriza o \textit{espaço semântico}
+            \end{alertblock}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Implicação}
+                O significado emerge da \textbf{estrutura geométrica}, não de definições explícitas
+            \end{block}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Espaços Latentes: Geometria Oculta}
+    \begin{columns}[T]
+        \begin{column}{0.55\textwidth}
+            \begin{block}{Representações Aprendidas}
+                \begin{itemize}
+                    \item Dados $\rightarrow$ espaço de alta dimensão
+                    \item Estrutura geométrica significativa
+                    \item Operações algébricas com sentido
+                \end{itemize}
+            \end{block}
+
+            \vspace{0.3cm}
+
+            \textbf{Exemplo (Word2Vec):}
+            \begin{equation*}
+                \vec{rei} - \vec{homem} + \vec{mulher} \approx \vec{rainha}
+            \end{equation*}
+
+            \vspace{0.2cm}
+            \textit{Analogias como paralelogramos no espaço vetorial}
+        \end{column}
+        \begin{column}{0.42\textwidth}
+            \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+                % Axes
+                \draw[->, thick, gray] (-0.5,0) -- (3.5,0);
+                \draw[->, thick, gray] (0,-0.5) -- (0,3);
+
+                % Points
+                \fill[unespazul] (1,0.5) circle (0.1cm) node[below right] {\tiny homem};
+                \fill[unespazul] (2.5,0.8) circle (0.1cm) node[below right] {\tiny rei};
+                \fill[unespvermelho] (0.8,2) circle (0.1cm) node[above left] {\tiny mulher};
+                \fill[unespvermelho] (2.3,2.3) circle (0.1cm) node[above right] {\tiny rainha};
+
+                % Vectors
+                \draw[->, thick, unespazul] (1,0.5) -- (2.5,0.8);
+                \draw[->, thick, unespvermelho] (0.8,2) -- (2.3,2.3);
+                \draw[->, dashed, gray] (1,0.5) -- (0.8,2);
+                \draw[->, dashed, gray] (2.5,0.8) -- (2.3,2.3);
+            \end{tikzpicture}
+            \end{center}
+
+            \vspace{0.3cm}
+            \textit{Geometria com semântica}
+        \end{column}
+    \end{columns}
+\end{frame}
+
 \begin{frame}{Arquitetura Transformer}
     \begin{columns}[T]
         \begin{column}{0.55\textwidth}
@@ -602,51 +682,6 @@
     \begin{center}
         \textit{Vaswani et al., ``Attention Is All You Need'', 2017}
     \end{center}
-\end{frame}
-
-\begin{frame}{Espaços Latentes: Geometria Oculta}
-    \begin{columns}[T]
-        \begin{column}{0.55\textwidth}
-            \begin{block}{Representações Aprendidas}
-                \begin{itemize}
-                    \item Dados $\rightarrow$ espaço de alta dimensão
-                    \item Estrutura geométrica significativa
-                    \item Operações algébricas com sentido
-                \end{itemize}
-            \end{block}
-
-            \vspace{0.3cm}
-
-            \textbf{Exemplo (Word2Vec):}
-            \begin{equation*}
-                \vec{rei} - \vec{homem} + \vec{mulher} \approx \vec{rainha}
-            \end{equation*}
-        \end{column}
-        \begin{column}{0.42\textwidth}
-            \begin{center}
-            \begin{tikzpicture}[scale=0.7]
-                % Axes
-                \draw[->, thick, gray] (-0.5,0) -- (3.5,0);
-                \draw[->, thick, gray] (0,-0.5) -- (0,3);
-
-                % Points
-                \fill[unespazul] (1,0.5) circle (0.1cm) node[below right] {\tiny homem};
-                \fill[unespazul] (2.5,0.8) circle (0.1cm) node[below right] {\tiny rei};
-                \fill[unespvermelho] (0.8,2) circle (0.1cm) node[above left] {\tiny mulher};
-                \fill[unespvermelho] (2.3,2.3) circle (0.1cm) node[above right] {\tiny rainha};
-
-                % Vectors
-                \draw[->, thick, unespazul] (1,0.5) -- (2.5,0.8);
-                \draw[->, thick, unespvermelho] (0.8,2) -- (2.3,2.3);
-                \draw[->, dashed, gray] (1,0.5) -- (0.8,2);
-                \draw[->, dashed, gray] (2.5,0.8) -- (2.3,2.3);
-            \end{tikzpicture}
-            \end{center}
-
-            \vspace{0.3cm}
-            \textit{Geometria com semântica}
-        \end{column}
-    \end{columns}
 \end{frame}
 
 \begin{frame}{Geração vs. Compreensão}
